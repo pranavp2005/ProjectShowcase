@@ -1,0 +1,35 @@
+Use these commands to run the project:
+
+Client:
+go run ./client -config config/node_config.json -tests CSE535-F25-Project-3-Testcases.csv
+
+Servers:
+
+go run ./server -id 1
+go run ./server -id 2
+go run ./server -id 3
+go run ./server -id 4
+go run ./server -id 5
+go run ./server -id 6
+go run ./server -id 7
+go run ./server -id 8
+go run ./server -id 9
+go run ./server -id 10
+go run ./server -id 11
+go run ./server -id 12
+
+Supported read consistency levels(add this in test file):
+consistency levels: 
+linearizable
+eventual
+majority
+
+Command to generate test transactions for benchmarking:
+go run ./benchgen \
+  -total 20 \
+  -rwPercent 80 \
+  -crossPercent 10 \
+  -skew 0.0 \
+  -out bench_sample.csv
+
+  

@@ -1,0 +1,18 @@
+in every terminal
+
+export PEERS="127.0.0.1:8001,127.0.0.1:8002,127.0.0.1:8003,127.0.0.1:8004,127.0.0.1:8005,127.0.0.1:8006,127.0.0.1:8007"
+
+
+go run ./server/main.go -id=1 -port=8001 -peers=$PEERS -client=127.0.0.1:9000
+go run ./server/main.go -id=2 -port=8002 -peers=$PEERS -client=127.0.0.1:9000
+go run ./server/main.go -id=3 -port=8003 -peers=$PEERS -client=127.0.0.1:9000
+go run ./server/main.go -id=4 -port=8004 -peers=$PEERS -client=127.0.0.1:9000
+go run ./server/main.go -id=5 -port=8005 -peers=$PEERS -client=127.0.0.1:9000
+go run ./server/main.go -id=6 -port=8006 -peers=$PEERS -client=127.0.0.1:9000
+go run ./server/main.go -id=7 -port=8007 -peers=$PEERS -client=127.0.0.1:9000
+
+
+client:
+go run ./client/cmd/pbftcli -listen 127.0.0.1:9000 -host 127.0.0.1 -csv CSE535-F25-Project-2-Testcases.csv
+
+go run ./client/cmd/pbftcli -listen 127.0.0.1:9000 -host 127.0.0.1 -csv CSE535-F25-Project-2-Testcases.csv -read-timeout 3s

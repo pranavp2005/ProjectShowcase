@@ -1,0 +1,9 @@
+what are the timers
+n1:800
+n2:850
+n3:870
+n4:900
+n5:920
+
+
+rpc timeout 1000 ms
